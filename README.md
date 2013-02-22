@@ -1,6 +1,7 @@
 # Poignant
 
-TODO: Write a gem description
+Poignant is a toolkit for natural language processing in Ruby.  It is named in
+honor of [why the lucky stiff][1].
 
 ## Installation
 
@@ -27,3 +28,6 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+
+[1]: http://en.wikipedia.org/wiki/Why_the_lucky_stiff

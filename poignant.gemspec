@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Poignant::VERSION
   gem.authors       = ["Aaron Massey"]
   gem.email         = ["akmassey@sixlines.org"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Poignant is a toolkit for natural language processing in Ruby.}
+  gem.summary       = %q{Poignant is a toolkit for natural language processing in Ruby.  It is named in honor of why the lucky stiff.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
