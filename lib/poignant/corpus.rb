@@ -3,6 +3,7 @@ require "poignant/frequency_distribution"
 module Poignant
   class Corpus
     include Poignant::FrequencyDistribution
+
     attr_reader :raw
 
     def initialize(string)
@@ -35,6 +36,10 @@ module Poignant
 
     def normalized
       @raw.downcase.gsub(/[^a-z ]/, '')
+    end
+
+    def lexical_diversity
+      word_count * 1.0 / unique_words.count
     end
   end
 end
