@@ -1,8 +1,40 @@
+require "poignant/frequency_distribution"
+
 module Poignant
   class Corpus
+    include Poignant::FrequencyDistribution
     attr_reader :raw
+
     def initialize(string)
       @raw = string
+    end
+
+    def tokens
+      @raw.split
+    end
+
+    def unique_tokens
+      tokens.uniq
+    end
+
+    def token_count
+      tokens.count
+    end
+
+    def words
+      normalized.split
+    end
+
+    def unique_words
+      words.uniq
+    end
+
+    def word_count
+      words.count
+    end
+
+    def normalized
+      @raw.downcase.gsub(/[^a-z ]/, '')
     end
   end
 end
