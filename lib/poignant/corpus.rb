@@ -1,8 +1,10 @@
 require "poignant/frequency_distribution"
+require "poignant/ngrams"
 
 module Poignant
   class Corpus
     include Poignant::FrequencyDistribution
+    include Poignant::NGrams
 
     attr_reader :raw
 

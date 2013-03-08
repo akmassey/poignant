@@ -24,5 +24,13 @@ module Poignant
     it "should be able to remove punctuation" do 
       Corpus.new(@punctuation).normalized.should eq "this is a small sentence it includes punctuation"
     end
+
+    it "should be able to calculate ngrams" do 
+      bigrams = Corpus.new(@small).ngrams(2)
+      bigrams.should_not be_nil
+      bigrams[0].should eq ["this", "is"]
+      bigrams[1].should eq ["is", "a"]
+      bigrams[2].should eq ["a", "small"]
+    end
   end
 end 
