@@ -21,6 +21,12 @@ module Poignant
       corpus.frequency_distribution["are"].should eq 1
     end
 
+    it "should be able to calculate a frequency distribution for tokens" do 
+      corpus = Corpus.new(@repeating)
+      corpus.frequency_distribution(tokens=true)["repeated"].should eq 2
+      corpus.frequency_distribution(tokens=true)["words."].should eq 1
+    end
+
     it "should be able to remove punctuation" do 
       Corpus.new(@punctuation).normalized.should eq "this is a small sentence it includes punctuation"
     end
