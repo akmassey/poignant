@@ -1,5 +1,6 @@
 module Poignant
   module FrequencyDistribution
+
     def frequency_distribution(tokens=false)
       fd = {}
       if tokens
@@ -13,5 +14,10 @@ module Poignant
       end
       fd
     end
+
+    def lexical_diversity
+      word_count * 1.0 / unique_words.count
+    end
+
   end
 end
